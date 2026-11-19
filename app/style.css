@@ -1,0 +1,110 @@
+/* Leonida Legend — dark navy, Vice pink and cyan. System fonts only, no external assets. */
+:root {
+  --bg: #0d1226;
+  --panel: #171d38;
+  --panel-2: #1f2650;
+  --line: #2c3566;
+  --text: #eef1ff;
+  --muted: #a7b0d6;
+  --pink: #ff5da2;
+  --cyan: #37d6e0;
+  --gold: #f5b942;
+  --silver: #c9d2e8;
+  --bronze: #d99a5b;
+  --platinum: #bfe9ff;
+  --good: #4ade80;
+  --danger: #ff7a7a;
+}
+* { box-sizing: border-box; }
+html { color-scheme: dark; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+a { color: var(--cyan); }
+a:visited { color: #8fd8ff; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+
+.hero { max-width: 960px; margin: 0 auto; padding: 24px 20px 8px; }
+.kicker { margin: 0 0 6px; color: var(--cyan); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
+h1 { margin: 0 0 8px; font-size: 2.2rem; line-height: 1.1; }
+h1::after { content: ""; display: block; width: 72px; height: 5px; margin-top: 10px; background: linear-gradient(90deg, var(--pink), var(--cyan)); border-radius: 3px; }
+.sub { max-width: 640px; color: var(--muted); font-size: 1rem; }
+.progress-wrap { margin: 14px 0 10px; }
+.progress-bar { height: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--pink), var(--cyan)); transition: width .25s ease; }
+.progress-text { margin: 6px 0 0; font-weight: 700; }
+.grade-counts { margin: 2px 0 0; color: var(--muted); font-size: .92rem; }
+.missable-banner { margin: 10px 0 0; padding: 10px 12px; background: #3a1526; border: 1px solid var(--pink); border-radius: 10px; }
+.missable-banner strong { color: var(--pink); }
+
+.toolbar { position: sticky; top: 0; z-index: 10; background: rgba(13, 18, 38, .97); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.toolbar-row { max-width: 1120px; margin: 0 auto; padding: 8px 20px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.pill { background: var(--panel-2); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-weight: 700; white-space: nowrap; }
+.search-label, .select-label { display: flex; gap: 6px; align-items: center; color: var(--muted); font-size: .92rem; }
+.search-label input[type="search"] { width: 220px; max-width: 60vw; }
+input[type="search"], select { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; }
+.spoiler-label { display: flex; gap: 6px; align-items: center; font-size: .92rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; font-size: .85rem; }
+.chip[aria-pressed="true"] { background: var(--pink); border-color: var(--pink); color: #fff; font-weight: 700; }
+.actions { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; }
+.actions button { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
+.actions button:hover { border-color: var(--cyan); }
+
+main { max-width: 960px; margin: 0 auto; padding: 8px 20px 32px; }
+section { margin-top: 20px; }
+h2 { font-size: 1.5rem; margin: 0 0 10px; }
+h3 { font-size: 1.15rem; margin: 22px 0 6px; }
+.muted { color: var(--muted); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin: 0 0 8px; }
+.fact { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.fact dt { margin: 0; color: var(--muted); font-size: .85rem; }
+.fact dd { margin: 2px 0 0; font-weight: 700; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.steps li { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.steps h4 { margin: 0 0 4px; font-size: 1.05rem; }
+.steps h4 .step-hours { color: var(--cyan); font-weight: 600; font-size: .9rem; margin-left: 8px; }
+.steps p { margin: 0; color: var(--muted); }
+.checklist { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px; }
+.checklist li { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: .95rem; }
+.checklist b { float: right; color: var(--cyan); }
+.warning { background: #3a1526; border: 1px solid var(--pink); border-radius: 10px; padding: 10px 12px; }
+
+#trophy-list { display: grid; gap: 10px; }
+.trophy { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
+.trophy.earned { border-color: var(--good); }
+.trophy-head { display: flex; gap: 10px; align-items: flex-start; }
+.trophy-check { flex: 0 0 auto; width: 22px; height: 22px; margin-top: 2px; accent-color: var(--good); }
+.trophy-title { flex: 1 1 auto; min-width: 0; }
+.trophy-title button { background: none; border: 0; padding: 0; text-align: left; font-size: 1.05rem; font-weight: 700; color: var(--text); display: block; }
+.trophy-title button:hover { color: var(--cyan); }
+.trophy-desc { margin: 2px 0 0; color: var(--muted); font-size: .95rem; display: inline; }
+.grade-tag { flex: 0 0 auto; font-size: .75rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+.grade-platinum { background: var(--platinum); color: #123; }
+.grade-gold { background: var(--gold); color: #231a00; }
+.grade-silver { background: var(--silver); color: #1a2233; }
+.grade-bronze { background: var(--bronze); color: #241503; }
+.tag { display: inline-block; font-size: .75rem; font-weight: 700; border-radius: 999px; padding: 2px 8px; margin-left: 6px; vertical-align: middle; }
+.tag-missable { background: var(--pink); color: #fff; }
+.tag-unconfirmed { background: #3a2f10; color: var(--gold); border: 1px solid var(--gold); }
+.tag-kind { background: var(--panel-2); color: var(--muted); border: 1px solid var(--line); }
+.trophy-guide { margin: 8px 0 0; padding: 8px 12px; background: var(--panel-2); border-radius: 8px; }
+.trophy-guide p { margin: 0 0 8px; }
+.trophy-guide p:last-child { margin-bottom: 0; }
+.trophy-sources { font-size: .88rem; color: var(--muted); }
+.spoiler-hidden { color: var(--muted); font-style: italic; }
+.empty { text-align: center; color: var(--muted); padding: 24px 0; }
+
+footer { max-width: 960px; margin: 0 auto; padding: 8px 20px 40px; border-top: 1px solid var(--line); font-size: .92rem; }
+footer p { margin: 12px 0 0; }
+
+@media (max-width: 640px) {
+  h1 { font-size: 2rem; }
+  .search-label input[type="search"] { width: 160px; }
+  .actions { margin-left: 0; }
+}

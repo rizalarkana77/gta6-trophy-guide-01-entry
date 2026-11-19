@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="A free, offline GTA VI trophy guide and tracker: all 55 trophies with guides, a roadmap to the platinum, and a checklist that saves in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+  <h1>Leonida Legend</h1>
+  <p class="sub">The complete GTA VI trophy guide and tracker — every trophy with a plain-words guide, a roadmap to the platinum, and a checklist that lives in your browser.</p>
+  <div class="progress-wrap">
+    <div class="progress-bar" role="progressbar" aria-label="Trophies earned"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
+    <p id="progress-text" class="progress-text">0 / 55 earned</p>
+    <p id="grade-counts" class="grade-counts"></p>
+  </div>
+  <div id="missable-banner" class="missable-banner" role="alert">
+    <strong>Only one missable trophy:</strong> Positive Mental Attitude. In Chapter 1, after the mission Down to Earth, talk to Lucia in the kitchen in the morning, follow her to the balcony and accept the meditation. Do it before you leave Chapter 1.
+  </div>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <div class="toolbar-row">
+    <span id="progress-pill" class="pill">0 / 55</span>
+    <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name or guide word…" autocomplete="off"></label>
+    <label class="select-label">Grade
+      <select id="grade-filter">
+        <option value="">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="select-label">Status
+      <select id="status-filter">
+        <option value="">All</option>
+        <option value="earned">Earned</option>
+        <option value="unearned">Not earned</option>
+      </select>
+    </label>
+    <label class="spoiler-label"><input id="spoiler-toggle" type="checkbox"> Hide story spoilers</label>
+  </div>
+  <div class="toolbar-row">
+    <div id="kind-chips" class="chips" role="group" aria-label="Filter by kind"></div>
+    <div class="actions">
+      <button id="export-btn" type="button">Export progress</button>
+      <button id="import-btn" type="button">Import progress</button>
+      <input id="import-file" type="file" accept="application/json,.json" hidden>
+      <button id="reset-btn" type="button">Reset</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section id="roadmap-section" aria-labelledby="roadmap-heading">
+    <h2 id="roadmap-heading">Roadmap to the platinum</h2>
+    <div id="roadmap-facts" class="facts"></div>
+    <ol id="roadmap-steps" class="steps"></ol>
+    <h3>100% completion checklist</h3>
+    <p class="muted">What A Long Road (gold) needs. Nothing on this list is missable.</p>
+    <ul id="roadmap-checklist" class="checklist"></ul>
+    <p id="missable-warning" class="warning"></p>
+  </section>
+
+  <section id="list-section" aria-labelledby="list-heading">
+    <h2 id="list-heading">All 55 trophies</h2>
+    <p class="muted">Tap a trophy to open its guide. Tick the box when earned — progress saves in this browser.</p>
+    <div id="trophy-list"></div>
+    <p id="empty-state" class="empty" hidden>No trophies match these filters.</p>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades are the official list. Methods draw on
+    <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx</a>,
+    <a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/">KeenGamer</a>,
+    <a href="https://www.gtavibes.com/guides/gta-6-trophy-list-achievements">GTA VIBES</a> and
+    <a href="https://gtasix.how/trophies/">GTASix.how</a> — each guide cites its sources beside it, in our own words.</p>
+  <p><strong>Honesty note.</strong> Five trophy methods were still unconfirmed when GTA VI launched on 19 Nov 2026. Those guides say so plainly instead of inventing a method.</p>
+  <p class="muted">Fan-made guide. Not affiliated with Rockstar Games or Take-Two Interactive. No Rockstar logo or artwork is used. No network requests, no cookies, no accounts — your checklist never leaves this browser.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
